@@ -10,4 +10,11 @@ $(document).ready(function() {
  */
 function initializePage() {
 	// your code here
+    $("button.likeBtn").click(clickLike);
+}
+
+
+function clickLike(e){
+	e.preventDefault();
+	ga("send", "event", 'like', 'click');
 }
